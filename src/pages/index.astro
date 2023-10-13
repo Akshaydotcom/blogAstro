@@ -7,6 +7,7 @@ import js2 from '../images/js2.jpg'
 import js3 from '../images/js3.jpg'
 import js4 from '../images/js4.jpg'
 import BlogPostCard from '../components/BlogPostCard.astro'
+import ContactForm from '../components/ContactForm.astro'
 ---
 <IndexLayout title="Home">
 	<div class="img-container">
@@ -20,6 +21,7 @@ import BlogPostCard from '../components/BlogPostCard.astro'
 			<BlogPostCard src={js4} alt="js4" title="Fourth Post" description="My Fourth Post"/>
 		</div>
 	</section>
+	<ContactForm />
 </IndexLayout>
 
 <style>
@@ -27,12 +29,24 @@ import BlogPostCard from '../components/BlogPostCard.astro'
 		display:inline-block;
 		align-content: center;
 		background-color: #1c1c1c;
+		margin-bottom: 5%;
 	}
 	img{
 		width:50dvw;
 		height:62dvh;
 		align-self: center;
-		margin-left:24.5dvw;
-		margin-right:24.5dvw;
+		margin-left:24dvw;
+		margin-right:24dvw;
+	}
+
+	section{
+		margin:0 24dvw;
+	}
+	section div{
+		display: flex;
+		justify-content: space-around;
+		gap:10px;
+		align-content: center;
+		flex-wrap:wrap;
 	}
 </style>

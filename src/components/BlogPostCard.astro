@@ -5,7 +5,7 @@ const {src,alt,title,description}= Astro.props;
 
 <div class="blog-post">
     <div class="img-container">
-        <Image src={src} width="90" height="90" alt=""/>
+        <Image src={src} width="60" height="60" alt={alt}/>
     </div>
     <div class="info-container">
         <h3>{title}</h3>
@@ -15,12 +15,18 @@ const {src,alt,title,description}= Astro.props;
 
 <style>
     .blog-post{
-        display:inline-flex
+        display:flex;
+        flex-direction: row;
+        margin-bottom: 5%;
     }
     img{
-        border-radius: 10%;
+        border-radius: 50%;
+    }
+    h3{
+        margin: 0;
     }
     .info-container{
         font-size: 25px;
+        margin-left:10px
     }
 </style>

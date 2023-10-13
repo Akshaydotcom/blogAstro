@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<navbar>
+    <Icon name="logoblackborder" width="60"/>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a target="_new" href="https://agigabyte.com/">Portfolio</a></li>
+        <li><a target="_new" href="../src/Frontend Developer Akshay.pdf">Resume</li>
+    </ul>
+</navbar>
+
+<style>
+    navbar{
+        display:inline-block;
+    }
+    navbar ul{
+        width:90dvw;
+        display:inline-flex;
+        justify-content:flex-end;
+        list-style-type:none;
+    }
+    navbar ul li{
+        padding-right:2dvw
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+</style>

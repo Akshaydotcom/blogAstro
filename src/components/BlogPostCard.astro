@@ -1,0 +1,26 @@
+---
+import  { Image } from "astro:assets";
+const {src,alt,title,description}= Astro.props;
+---
+
+<div class="blog-post">
+    <div class="img-container">
+        <Image src={src} width="90" height="90" alt=""/>
+    </div>
+    <div class="info-container">
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    .blog-post{
+        display:inline-flex
+    }
+    img{
+        border-radius: 10%;
+    }
+    .info-container{
+        font-size: 25px;
+    }
+</style>

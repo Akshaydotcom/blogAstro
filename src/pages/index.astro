@@ -1,16 +1,38 @@
 ---
-
+import IndexLayout from '../Layouts/IndexLayout.astro'
+import { Image } from 'astro:assets'
+import index1 from '../../src/images/index1.jpg'
+import js1 from '../images/js1.jpg'
+import js2 from '../images/js2.jpg'
+import js3 from '../images/js3.jpg'
+import js4 from '../images/js4.jpg'
+import BlogPostCard from '../components/BlogPostCard.astro'
 ---
+<IndexLayout title="Home">
+	<div class="img-container">
+		<Image src={index1} alt="background"/>
+	</div>
+	<section>
+		<div>
+			<BlogPostCard src={js1} alt="js1" title="First Post" description="My First Post"/>
+			<BlogPostCard src={js2} alt="js2" title="Second Post" description="My Second Post"/>
+			<BlogPostCard src={js3} alt="js3" title="Third Post" description="My Third Post"/>
+			<BlogPostCard src={js4} alt="js4" title="Fourth Post" description="My Fourth Post"/>
+		</div>
+	</section>
+</IndexLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+	.img-container{
+		display:inline-block;
+		align-content: center;
+		background-color: #1c1c1c;
+	}
+	img{
+		width:50dvw;
+		height:62dvh;
+		align-self: center;
+		margin-left:24.5dvw;
+		margin-right:24.5dvw;
+	}
+</style>

@@ -10,43 +10,13 @@ import BlogPostCard from '../components/BlogPostCard.astro'
 import ContactForm from '../components/ContactForm.astro'
 ---
 <IndexLayout title="Home">
-	<div class="img-container">
-		<Image src={index1} alt="background"/>
+	<div class="main-intro">
+
 	</div>
-	<section>
-		<div>
-			<BlogPostCard src={js1} alt="js1" title="First Post" description="My First Post"/>
-			<BlogPostCard src={js2} alt="js2" title="Second Post" description="My Second Post"/>
-			<BlogPostCard src={js3} alt="js3" title="Third Post" description="My Third Post"/>
-			<BlogPostCard src={js4} alt="js4" title="Fourth Post" description="My Fourth Post"/>
-		</div>
-	</section>
-	<ContactForm />
 </IndexLayout>
 
 <style>
-	.img-container{
-		display:inline-block;
-		align-content: center;
-		background-color: #1c1c1c;
-		margin-bottom: 5%;
-	}
-	img{
-		width:50dvw;
-		height:62dvh;
-		align-self: center;
-		margin-left:24dvw;
-		margin-right:24dvw;
-	}
-
-	section{
-		margin:0 24dvw;
-	}
-	section div{
-		display: flex;
-		justify-content: space-around;
-		gap:10px;
-		align-content: center;
-		flex-wrap:wrap;
+	.main-intro{
+		display:grid
 	}
 </style>

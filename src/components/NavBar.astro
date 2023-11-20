@@ -1,9 +1,14 @@
 ---
-import { Icon } from 'astro-icon';
+
 ---
 
 <navbar>
-    <Icon name="logoblackborder" width="60"/>
+    <div class="sidebar">
+        <div class="vertical-line"></div>
+        <a href="#">Discord</a>
+        <a href="#">Discord</a>
+        <a href="#">Discord</a>
+    </div>
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About Me</a></li>
@@ -28,5 +33,21 @@ import { Icon } from 'astro-icon';
     a{
         text-decoration: none;
         color:black;
+    }
+
+    .sidebar{
+        height: 100%;
+        width: 80px;
+        position: fixed;
+        z-index: 1;
+        top:0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vertical-line{
+        width:20px;
+        height:200px;
+        border-right: 1px solid black;
     }
 </style>
